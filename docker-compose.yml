@@ -1,0 +1,24 @@
+version: '3.1'
+
+services:
+
+  my_app:
+    build: .
+    ports:
+    - 8081:8081
+
+  db:
+    image: postgres:11
+    restart: always
+    environment:
+      POSTGRES_DB: "MyDB"
+      POSTGRES_USER: "Kenroy"
+      POSTGRES_PASSWORD: 123
+    ports:
+      - 5432:5432
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080

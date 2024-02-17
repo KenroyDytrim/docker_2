@@ -1,0 +1,5 @@
+/.dist
+/.venv
+/models/__pycache__
+/public/__pycache__
+/requirements.txt
